@@ -134,12 +134,6 @@ func workloadTypes(schemas *types.Schemas) *types.Schemas {
 				"resume":   {},
 				"redeploy": {},
 			}
-			schema.MustCustomizeField("name", func(field types.Field) types.Field {
-				field.Type = "hostname"
-				field.Nullable = false
-				field.Required = true
-				return field
-			})
 		})
 }
 
